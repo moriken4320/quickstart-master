@@ -17,3 +17,6 @@ test:
 
 format:
 	dart format .
+
+analyze:
+	dart analyze

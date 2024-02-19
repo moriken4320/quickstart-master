@@ -1,5 +1,4 @@
 import 'package:angular_app/in_memory_data_service.dart';
-import 'package:http/browser_client.dart';
 import 'package:http/http.dart';
 import 'package:ngdart/angular.dart';
 import 'package:ngrouter/ngrouter.dart';
