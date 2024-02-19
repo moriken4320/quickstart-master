@@ -1,0 +1,7 @@
+platforms:
+  - chrome
+override_platforms:
+  chrome:
+    settings:
+      headless: true
+      arguments: --no-sandbox  # required if running as root
