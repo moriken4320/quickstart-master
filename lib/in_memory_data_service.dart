@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:http/http.dart';
 import 'package:http/testing.dart';
 import 'src/hero.dart';
+
 class InMemoryDataService extends MockClient {
   static final _initialHeroes = [
     {'id': 11, 'name': 'Mr. Nice'},
@@ -56,10 +57,12 @@ class InMemoryDataService extends MockClient {
     return Response(json.encode({'data': data}), 200,
         headers: {'content-type': 'application/json'});
   }
+
   static void resetDb() {
     _heroesDb = _initialHeroes.map((json) => Hero.fromJson(json)).toList();
     _nextId = _heroesDb.map((hero) => hero.id).fold(0, max) + 1;
   }
+
   static String lookUpName(int id) =>
       _heroesDb.firstWhere((hero) => hero.id == id, orElse: null).name;
   InMemoryDataService() : super(_handler) {

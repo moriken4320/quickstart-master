@@ -4,7 +4,6 @@ import 'package:ngrouter/ngrouter.dart';
 
 import 'src/hero_service.dart';
 
-
 @Component(
   selector: 'my-app',
   template: '''
@@ -18,9 +17,7 @@ import 'src/hero_service.dart';
     <router-outlet [routes]="Routes.all"></router-outlet>
   ''',
   styleUrls: ['app_component.css'],
-  directives: [
-    routerDirectives
-  ],
+  directives: [routerDirectives],
   providers: [ClassProvider(HeroService)],
   exports: [RoutePaths, Routes],
 )

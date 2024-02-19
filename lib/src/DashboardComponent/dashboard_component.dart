@@ -7,11 +7,10 @@ import '../hero.dart';
 import '../hero_service.dart';
 
 @Component(
-  selector: 'my-dashboard',
-  templateUrl: 'dashboard_component.html',
-  styleUrls: ['dashboard_component.css'],
-  directives: [coreDirectives, routerDirectives, HeroSearchComponent]
-)
+    selector: 'my-dashboard',
+    templateUrl: 'dashboard_component.html',
+    styleUrls: ['dashboard_component.css'],
+    directives: [coreDirectives, routerDirectives, HeroSearchComponent])
 class DashboardComponent implements OnInit {
   List<Hero> heroes = [];
   final HeroService _heroService;

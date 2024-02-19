@@ -14,3 +14,6 @@ build:
 .PHONY: test
 test:
 	dart run test --platform chrome
+
+format:
+	dart format --set-exit-if-changed .

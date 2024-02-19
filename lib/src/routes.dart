@@ -1,8 +1,10 @@
 import 'package:ngrouter/ngrouter.dart';
 
 import 'route_paths.dart';
-import 'HeroListComponent/hero_list_component.template.dart' as hero_list_template;
-import 'DashboardComponent/dashboard_component.template.dart' as dashboard_template;
+import 'HeroListComponent/hero_list_component.template.dart'
+    as hero_list_template;
+import 'DashboardComponent/dashboard_component.template.dart'
+    as dashboard_template;
 import 'HeroComponent/hero_component.template.dart' as hero_template;
 
 export 'route_paths.dart';

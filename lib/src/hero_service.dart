@@ -9,7 +9,7 @@ class HeroService {
   final Client _http;
 
   HeroService(this._http);
-  
+
   Future<List<Hero>> getAll() async {
     try {
       final response = await _http.get(Uri.parse(_heroesUrl));

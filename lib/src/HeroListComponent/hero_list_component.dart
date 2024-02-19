@@ -7,15 +7,12 @@ import '../hero.dart';
 import '../route_paths.dart';
 
 @Component(
-  selector: 'my-heroes',
-  templateUrl: 'hero_list_component.html',
-  styleUrls: ['hero_list_component.css'],
-  directives: [
-    coreDirectives
-  ],
-  providers: [],
-  pipes: [commonPipes]
-)
+    selector: 'my-heroes',
+    templateUrl: 'hero_list_component.html',
+    styleUrls: ['hero_list_component.css'],
+    directives: [coreDirectives],
+    providers: [],
+    pipes: [commonPipes])
 class HeroListComponent implements OnInit {
   final HeroService _heroService;
   final Router _router;
@@ -28,9 +25,11 @@ class HeroListComponent implements OnInit {
 
   void ngOnInit() => _getHeroes();
 
-  String _heroUrl(int id) => RoutePaths.hero.toUrl(parameters: {idParam: '$id'});
-  
-  Future<NavigationResult> gotoDetail() => _router.navigate(_heroUrl(selected!.id));
+  String _heroUrl(int id) =>
+      RoutePaths.hero.toUrl(parameters: {idParam: '$id'});
+
+  Future<NavigationResult> gotoDetail() =>
+      _router.navigate(_heroUrl(selected!.id));
 
   Future<void> add(InputElement event) async {
     final String? name = event.value?.trim();
